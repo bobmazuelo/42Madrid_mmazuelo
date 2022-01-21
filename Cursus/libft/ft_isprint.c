@@ -1,7 +1,6 @@
-int	ft_isprint(char c)
+t_bool	ft_isprint(char c)
 {
 	if (c >= 32 && c <= 126)
-		return (16384);
-	else
-		return (0);
+		return (1);
+	return (0);
 }

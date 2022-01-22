@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/22 11:45:58 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/01/22 16:48:43 by mmazuelo         ###   ########.fr       */
+/*   Created: 2021/12/14 15:17:40 by mmazuelo          #+#    #+#             */
+/*   Updated: 2021/12/15 16:37:34 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlen(const char *str)
+int	ft_ultimate_range(int **range, int min, int max)
 {
-	size_t	i;
+	int i;
+	int	size;
 
 	i = 0;
-	while (*(str + i) != '\0')
-		i++;
-	return (i);
-}
+	size = (max - min);
+	if ( min >= max)
+	{
+		*range = NULL;
+		return (0);
+	}
+	arr = malloc(size * sizeof(int));
+

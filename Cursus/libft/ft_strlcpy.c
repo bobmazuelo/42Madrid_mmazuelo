@@ -6,7 +6,7 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 13:37:46 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/01/22 17:17:46 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/01/22 18:06:47 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 {
-	const size_t	srcsize;
+	size_t	srcsize;
 
 	srcsize = ft_strlen(src);
 	if (srcsize + 1 < dstsize)
@@ -24,5 +24,5 @@ size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 		ft_memcpy(dst, src, dstsize - 1);
 		dst[dstsize - 1] = '\0';
 	}
-	return (srclen);
+	return (srcsize);
 }

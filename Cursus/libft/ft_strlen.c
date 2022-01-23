@@ -21,3 +21,27 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
+
+/*
+ * Termux-Vim
+ *
+ * #include <stdio.h>
+ *
+ * size_t	ft_strlen(const char *str)
+ * {
+ * 		const char *ptr;
+ *
+ * 		ptr = str;
+ * 		while (*ptr)
+ * 			ptr++;
+ * 		return (ptr - str);
+ * }
+ *
+ * int		main(void)
+ * {		char txt[256] = "Hola chico"; //10
+ * 		size_t n = ft_strlen(txt);
+ * 		printf("%zu\n", n);
+ * 		return (0);
+ * }
+ */
+

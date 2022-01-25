@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
 #define FT_STRNLEN(dst, size) (sizeof(dst) / sizeof(*(dst))) - size
 
 size_t  ft_strlcat(char *dst, const char *src, size_t size)

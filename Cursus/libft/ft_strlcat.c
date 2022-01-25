@@ -12,10 +12,12 @@
 
 #include "libft.h"
 
+#define FT_STRNLEN(dst, size) (sizeof(dst) / sizeof(*(dst))) - size
+
 size_t  ft_strlcat(char *dst, const char *src, size_t size)
 {
     const size_t srclen = ft_strlen(src);
-    const size_t dstlen = strnlen(dst, size); // deshacerme de esta función y entender el funcionamiento de strlcat
+    const size_t dstlen = FT_STRNLEN(dst, size);
 
     if (dstlen == size) 
         return size + srclen;

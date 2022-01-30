@@ -6,7 +6,7 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 11:45:58 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/01/22 16:48:43 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/01/30 13:18:30 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,7 @@ size_t	ft_strlen(const char *str)
  * 		return (ptr - str);
  * }
  *
- * ****************************************************************************
- * 
+ *  
  * size_t  ft_strlen(const char *str) 
  * {
  * 	if (*str == 0)
@@ -44,4 +43,3 @@ size_t	ft_strlen(const char *str)
  *	}
  *
  */
-

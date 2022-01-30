@@ -6,11 +6,11 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 21:06:33 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/01/28 21:06:33 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/01/30 13:12:24 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-    return(s);
+	return (s);
 }

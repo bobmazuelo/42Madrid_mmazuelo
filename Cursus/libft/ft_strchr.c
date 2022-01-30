@@ -6,16 +6,16 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 21:58:28 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/01/27 21:58:28 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/01/30 13:13:49 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-    while (*s++ != '\0')
-        if (*s == c)
-            return ((char*)s);
-    return (0);
+	while (*s++ != '\0')
+		if (*s == c)
+			return ((char *)s);
+	return (0);
 }

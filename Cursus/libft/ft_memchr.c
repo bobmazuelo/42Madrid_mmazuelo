@@ -6,9 +6,11 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 21:06:33 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/01/30 14:00:49 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/01/30 17:43:41 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

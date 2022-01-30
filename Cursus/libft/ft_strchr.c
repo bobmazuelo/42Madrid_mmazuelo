@@ -6,7 +6,7 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 21:58:28 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/01/30 13:13:49 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/01/30 18:39:11 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s++ != '\0')
+	while (*s != '\0')
+	{
 		if (*s == c)
 			return ((char *)s);
+		s++;
+	}
 	return (0);
 }

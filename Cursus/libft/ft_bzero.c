@@ -6,17 +6,20 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 12:39:13 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/01/22 16:45:26 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/01/30 18:40:29 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	bzero(void *b, size_t n)
+void	ft_bzero(void *b, size_t n)
 {
 	unsigned char	*ptr;
 
 	ptr = b;
-	while (n-- > 0)
+	while (n > 0)
+	{
 		*ptr++ = 0;
+		n--;
+	}
 }

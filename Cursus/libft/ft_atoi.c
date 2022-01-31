@@ -37,3 +37,28 @@ int	ft_atoi(const char *str)
 	}
 	return ((int)(sign * num));
 }
+
+
+/*
+int string_to_number(const char *src) {
+  int     i;
+  int     sign;
+  int     num;
+
+  i = 0;
+  sign = 1;
+  num = 0;
+  while (src[i] == '-' || src[i] == '+')
+  {
+    if (src[i] == '-')
+      sign *= -1;
+    i++;
+  }
+  while (src[i] >= '0' && src[i] <= '9')
+  {
+    num = (src[i] - '0') + (num * 10);
+    i++;
+  }
+  return ((int)(sign * num));
+}
+*/

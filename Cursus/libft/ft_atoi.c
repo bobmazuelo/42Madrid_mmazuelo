@@ -61,4 +61,20 @@ int string_to_number(const char *src) {
   }
   return ((int)(sign * num));
 }
+
+int string_to_number(const char *src)
+{
+  int to_dec = 0;
+  char n = 0;
+  
+  if (n = (*src == '-'))
+      src++;
+  
+  while (*src && *src >= '0' && *src <= '9') {
+    to_dec *= 10;
+    to_dec += *(src)++ & 0xF;
+  }
+  
+  return ((n == 1) ? -(to_dec) : to_dec);
+}
 */

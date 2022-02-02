@@ -37,3 +37,44 @@ int	ft_atoi(const char *str)
 	}
 	return ((int)(sign * num));
 }
+
+
+/*
+int string_to_number(const char *src) {
+  int     i;
+  int     sign;
+  int     num;
+
+  i = 0;
+  sign = 1;
+  num = 0;
+  while (src[i] == '-' || src[i] == '+')
+  {
+    if (src[i] == '-')
+      sign *= -1;
+    i++;
+  }
+  while (src[i] >= '0' && src[i] <= '9')
+  {
+    num = (src[i] - '0') + (num * 10);
+    i++;
+  }
+  return ((int)(sign * num));
+}
+
+int string_to_number(const char *src)
+{
+  int to_dec = 0;
+  char n = 0;
+  
+  if (n = (*src == '-'))
+      src++;
+  
+  while (*src && *src >= '0' && *src <= '9') {
+    to_dec *= 10;
+    to_dec += *(src)++ & 0xF;
+  }
+  
+  return ((n == 1) ? -(to_dec) : to_dec);
+}
+*/

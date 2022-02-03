@@ -6,26 +6,26 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 09:36:32 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/02/03 17:46:17 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/02/03 18:16:40 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 //#include <stdlib.h>
 
-void	*ft_calloc(size_t nelem, size_t elsize)
+void	*ft_calloc(size_t count, size_t size)
 {
 	void			*call;
 	unsigned char	*ptr;
 
-	call = malloc(nelem * elsize);
+	call = malloc(count * size);
 	if (!call)
 		return (0);
 	ptr = call;
-	while (n > 0)
+	while (size > 0)
 	{
 		*ptr++ = 0;
-		n--;
+		size--;
 	}
 	return (call);
 }

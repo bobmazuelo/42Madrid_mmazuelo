@@ -6,7 +6,7 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 13:14:04 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/01/22 17:08:52 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/02/03 19:59:02 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	pd = dst;
 	ps = src;
+
+	if (!pd && !ps)
+		return (NULL);
 	if (pd < ps)
 		while (len--)
 			*pd++ = *ps++;

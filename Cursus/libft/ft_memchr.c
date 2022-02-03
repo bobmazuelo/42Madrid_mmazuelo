@@ -6,7 +6,7 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 21:06:33 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/02/03 18:02:28 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/02/03 19:07:37 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	i = 0;
 	str = s;
-	while (*str != '\0' && i < n)
+	while (i < n)
 	{
 		if (*str == c)
 			return ((void *)(str));

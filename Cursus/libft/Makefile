@@ -6,7 +6,7 @@
 #    By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/30 17:14:48 by mmazuelo          #+#    #+#              #
-#    Updated: 2022/02/03 18:09:11 by mmazuelo         ###   ########.fr        #
+#    Updated: 2022/02/03 20:41:02 by mmazuelo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ FILES = 	ft_atoi \
 			ft_memcpy \
 			ft_memmove \
 			ft_memset \
+			ft_strdup \
 			ft_strchr \
 			ft_strlcat \
 			ft_strlcpy \

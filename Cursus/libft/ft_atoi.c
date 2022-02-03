@@ -6,7 +6,7 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 11:25:32 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/01/30 18:51:06 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/02/03 17:44:59 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,6 @@ int	ft_atoi(const char *str)
 	}
 	return ((int)(sign * num));
 }
-
-
 /*
 int string_to_number(const char *src) {
   int     i;

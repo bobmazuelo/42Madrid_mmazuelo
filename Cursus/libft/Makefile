@@ -63,9 +63,9 @@ $(NAME): $(OBJS)
 bonus: $(OBJS_B)
 	$(AR) $(NAME) $^
 
-so:
-		$(CC) -fPIC $(CFLAGS) $(SRC)
-			gcc -shared -o libft.so $(OBJ)
+# so:
+#		$(CC) -fPIC $(CFLAGS) $(SRC)
+#			gcc -shared -o libft.so $(OBJ)
 
 all: $(NAME)
 

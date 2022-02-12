@@ -15,4 +15,13 @@
 char	**ft_split(char const *s, char c)
 {
 	char	**spl;
-	size_t	elem
+	size_t	token_count;
+
+	spl = malloc((token_count + 1) * sizeof(*spl));
+	if (!s)
+		return (spl);
+	if (!tab)
+		return (spl);
+	ft_();
+	return (tab);
+}

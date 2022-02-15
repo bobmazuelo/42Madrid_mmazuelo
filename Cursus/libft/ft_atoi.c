@@ -16,23 +16,25 @@
 int	ft_atoi(const char *str)
 {
 	size_t	i;
-	int		sign;
 	size_t	num;
+	int		sign;
 
 	i = 0;
 	sign = 1;
 	num = 0;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
-		|| str[i] == '\f' || str[i] == '\r')
+	while (str[i] == 0x20 || (str[i] >= 0x09 && str[i] <= 0x0D))
 		i++;
-	while (str[i] == '-' || str[i] == '+')
+	if (str[i] == '-' || str[i] == '+')
 		if (str[i++] == '-')
-			sign *= -1;
+			sign = -1;
 	while (str[i] >= '0' && str[i] <= '9')
-		num = (str[i++] & 0xF) + (num * 10);
-	if (num > LONG_MAX && sign < 0)
+	{
+		num = (str[i] & 0xF) + (num * 10);
+		i++;
+	}
+	if ((long int)(num * sign) < INT_MIN)
 		return (0);
-	else if (num > LONG_MAX && sign > 0)
+	else if ((long int)(num * sign) > INT_MAX)
 		return (-1);
 	return ((int)(num * sign));
 }

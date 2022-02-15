@@ -16,12 +16,11 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void			*call;
 	unsigned char	*ptr;
-	size_t n;
+	size_t			n;
 
 	call = malloc(count * size);
 	if (!call)
 		return (0);
-	
 	ptr = call;
 	n = (count * size);
 	while (n > 0)

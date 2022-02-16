@@ -6,7 +6,7 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 20:31:09 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/02/14 18:53:06 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/02/16 17:57:48 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,22 +23,3 @@ char	*ft_strdup(const char *s)
 		return (NULL);
 	return (ft_memcpy(ptr, s, len));
 }
-/*
-char	*ft_strdup(const char *s)
-{
-	char	*str;
-	size_t	i;
-	
-	i = 0;
-	str = malloc(ft_strlen(s) + 1);
-	if (!s || !str)
-		return (NULL);
-	while (s[i])
-	{
-		str[i] = s[i];
-		i++;
-	}
-	str[i] = 0;
-	return (str);
-}
-*/

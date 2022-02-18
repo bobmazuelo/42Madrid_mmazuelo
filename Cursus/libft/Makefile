@@ -6,7 +6,7 @@
 #    By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/30 17:14:48 by mmazuelo          #+#    #+#              #
-#    Updated: 2022/02/16 13:21:53 by mmazuelo         ###   ########.fr        #
+#    Updated: 2022/02/17 23:03:01 by mmazuelo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,10 +72,9 @@ $(NAME): $(OBJS)
 
 bonus: $(OBJS_B)
 	$(AR) $(NAME) $^
-
-#so:
-#	$(CC) -fPIC $(CFLAGS) $(SRC)
-#		gcc -shared -o libft.so $(OBJ)
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
 all: $(NAME)
 
@@ -83,7 +82,7 @@ clean:
 	$(RM) $(OBJS) $(OBJS_B)
 
 fclean: clean
-	$(RM) $(NAME)
+	$(RM) $(NAME) libft.so
 
 re: clean all
 

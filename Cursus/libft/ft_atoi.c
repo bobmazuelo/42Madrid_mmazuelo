@@ -6,7 +6,7 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 11:25:32 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/02/16 13:04:12 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/02/18 17:40:48 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ int	ft_atoi(const char *str)
 		num = (str[i] & 0xF) + (num * 10);
 		i++;
 	}
-	if ((long)(num * sign) < INT_MIN)
-		return (0);
-	else if ((long)(num * sign) > INT_MAX)
+	if (num > LONG_MAX && sign > 0)
 		return (-1);
+	if (num > LONG_MAX && sign < 0)
+		return (0);
 	return ((int)(num * sign));
 }

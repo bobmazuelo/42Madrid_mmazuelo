@@ -6,7 +6,7 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 13:51:14 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/02/17 22:23:57 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/02/18 17:50:58 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ char	**ft_split(char const *s, char c)
 	char	**ptr;
 
 	pos = 0;
+	if (!s)
+		return (NULL);
 	ptr = malloc(sizeof(char **) * (ft_token_count(s, c) + 1));
 	if (!ptr)
 		return (NULL);

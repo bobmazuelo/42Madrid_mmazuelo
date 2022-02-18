@@ -6,7 +6,7 @@
 #    By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/30 17:14:48 by mmazuelo          #+#    #+#              #
-#    Updated: 2022/02/17 23:03:01 by mmazuelo         ###   ########.fr        #
+#    Updated: 2022/02/18 19:47:58 by mmazuelo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,8 +52,15 @@ FILES =	ft_atoi \
 	ft_tolower \
 	ft_toupper \
 
-#FILES_B =
-
+FILES_B = ft_lstadd_back_bonus \
+		  ft_lstadd_front_bonus \
+		  ft_lstclear_bonus \
+		  ft_lstdelone_bonus \
+		  ft_lstiter_bonus \
+		  ft_lstlast_bonus \
+		  ft_lstmap_bonus \
+		  ft_lstnew_bonus \
+		  ft_lstsize_bonus
 
 SRCS_DIR = ./
 SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
@@ -72,18 +79,15 @@ $(NAME): $(OBJS)
 
 bonus: $(OBJS_B)
 	$(AR) $(NAME) $^
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
-all: $(NAME)
+all: $(NAME) bonus
 
 clean:
 	$(RM) $(OBJS) $(OBJS_B)
 
 fclean: clean
-	$(RM) $(NAME) libft.so
+	$(RM) $(NAME)
 
 re: clean all
 
-.PHONY: bonus all clean fclean re
+.PHONY: all clean fclean re

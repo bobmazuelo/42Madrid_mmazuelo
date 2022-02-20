@@ -6,10 +6,30 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 09:02:43 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/02/20 09:08:07 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/02/20 11:29:11 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
 
-int	ft_printf(const char *ftm, ...);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+int	ft_printf(const char *ftm, ...)
+{
+	int	done;
+	//
+	//
+	//
+	return (done);
+}

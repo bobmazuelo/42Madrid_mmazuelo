@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/20 09:02:43 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/02/20 20:15:49 by mmazuelo         ###   ########.fr       */
+/*   Created: 2022/02/20 20:02:37 by mmazuelo          #+#    #+#             */
+/*   Updated: 2022/02/20 20:02:52 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-int	ft_printf(const char *ftm, ...)
-{
-	int	done;
-	va_list	args;
-	char	*str_print;
-	
-	va_start(args, ftm);
-	done = ft_ (str_print, );
-	va_end(args);
-	ft_putstr_fd(str_print, 1);
-	return (done);
-}
+#include "libft/libft.h"
+#include <stdarg.h>
+#include <unistd.h>
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+#endif

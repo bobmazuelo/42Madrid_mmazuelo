@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft/libft.h"
+
 #ifndef LIBFTPRINTF_H
 # define LIBFTPRINTF_H
 

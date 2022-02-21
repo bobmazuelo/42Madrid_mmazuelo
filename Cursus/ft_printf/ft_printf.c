@@ -18,9 +18,11 @@ int	ft_printf(const char *ftm, ...)
 	int	done;
 	char	*str_print;
 	
+	if (fmt == NULL)
+		return (0);
 	va_start(args, ftm);
-	done = vprint(str_print, ftm, args);
+	done = ft_vprint(str_print, ftm, args);
 	va_end(args);
-	ft_putstr_fd(str_print, 1);
+	// ft_putstr_fd(str_print, 1);
 	return (done);
 }

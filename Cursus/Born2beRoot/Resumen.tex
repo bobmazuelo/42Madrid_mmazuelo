@@ -1,0 +1,107 @@
+\documentclass[a4paper]{article}
+\usepackage[spanish]{babel}
+\selectlanguage{spanish}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[a4paper,top=3cm,bottom=1.25cm,left=1.75cm,right=1.75cm,marginparwidth=1.75cm]{geometry}
+
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\title{Born2beRoot}
+\author{Miguel Mazuelo Álvarez\\
+  \small 42 Madrid\\
+  \small mmazuelo@student.42madrid.com\\
+  \date{}
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Este documento es un ejercicio de administración de sistemas.
+\end{abstract}
+
+\section{Parte obligatoria}
+\subsection{Selecci\'on del sistema operativo}
+He seleccionado CentOS principalmente para entender su complejidad [...]
+
+\subsection{Instalaci\'on}
+Le he facilitado 30.8GB para hacer la parte bonus. \\
+2GB de RAM es suficiente para poder correr. \\
+Adaptador de red como adaptador puente para tener una ip en LAN ej (192.168.1.53) al contrario que en NAT (10.0.1.23) el cual solo el ordenador anfitrión puede conectarse. ?? \\
+Se instala la versión CentOS Linux 7 \\
+Se ha tratado de instalar la version CentOS Linux 8. pero está fue destruida el 31/12/2021 ya que se querían centrar en CentOS Stream 8 (esta versión carece de instalación mínima y solo existe versión escritorio).\footnote{https://www.centos.org/news-and-events/1322-october-centos-dojo-videos/}
+
+\subsection{Configurando CentOS}
+\subsubsection{Instalando dnf}
+dnf es un gestor de paquetes para distribuciones basadas en RPM, es una versión mejorada de yum 
+\\
+Primeramente se comprueba si tenemos instalada alguna version de dnf. Por lo tanto introducimos:
+\begin{lstlisting}[language=Bash]
+dnf --version
+\end{lstlisting}
+Para instalarlo nos apoyamos con yum. Al meter como argumento -y en la instalación estamos aceptamos todo aquello que nos pregunte miestras se instala el paquete.
+\begin{lstlisting}[language=Bash]
+yum install dnf -y
+\end{lstlisting}
+
+\subsubsection{LVM}
+
+\subsubsection{SELinux}
+\paragraph{AppArmor}
+
+\subsubsection{UFW}
+\begin{lstlisting}[language=Bash]
+dnf install epel-release -y
+\end{lstlisting}
+EPEL (Extra Packages for Enterprise Linux) is exactly what it's name implies. It is a set of additional packages that would not normally be available on Enterprise Linux
+\begin{lstlisting}[language=Bash]
+dnf install ufw -y
+ufw enable
+\end{lstlisting}
+\begin{lstlisting}[language=Bash]
+ufw status verbose
+\end{lstlisting}
+\paragraph{firewalld}
+
+\subsubsection{ssh}
+
+\subsubsection{sudo}
+
+\section{Bonus}
+
+
+\end{document}

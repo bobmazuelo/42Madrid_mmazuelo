@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/20 20:02:37 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/02/28 00:28:32 by mmazuelo         ###   ########.fr       */
+/*   Created: 2022/01/28 20:22:56 by mmazuelo          #+#    #+#             */
+/*   Updated: 2022/02/03 20:26:09 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-#include "libft/libft.h"
-#include <stdarg.h>
+int	ft_strncmp(const char *str1, const char *str2, size_t n)
+{
+	size_t	i;
 
-int	ft_vprintf(char *buf, const char *fmt, va_list args);
-//
-//
-//
-//
-//
-//
-//
-//
-
-#endif
+	i = 0;
+	if (!n)
+		return (0);
+	while (str1[i] == str2[i] && str1[i] && str2[i] && --n)
+		i++;
+	return ((unsigned char)str1[i] - (unsigned char)str2[i]);
+}

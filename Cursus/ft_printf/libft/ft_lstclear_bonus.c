@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/20 20:02:37 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/02/28 00:28:32 by mmazuelo         ###   ########.fr       */
+/*   Created: 2022/02/18 19:23:39 by mmazuelo          #+#    #+#             */
+/*   Updated: 2022/02/18 19:39:26 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-#include "libft/libft.h"
-#include <stdarg.h>
+void	ft_lstclear(t_list **lst, void (*del)(void *))
+{
+	t_list	*aux;
 
-int	ft_vprintf(char *buf, const char *fmt, va_list args);
-//
-//
-//
-//
-//
-//
-//
-//
-
-#endif
+	while (*lst)
+	{
+		aux = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = aux;
+	}
+	*lst = NULL;
+}

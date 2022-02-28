@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/20 20:02:37 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/02/28 00:28:32 by mmazuelo         ###   ########.fr       */
+/*   Created: 2022/01/22 13:37:46 by mmazuelo          #+#    #+#             */
+/*   Updated: 2022/01/22 18:06:47 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-#include "libft/libft.h"
-#include <stdarg.h>
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+{
+	size_t	srcsize;
 
-int	ft_vprintf(char *buf, const char *fmt, va_list args);
-//
-//
-//
-//
-//
-//
-//
-//
-
-#endif
+	srcsize = ft_strlen(src);
+	if (srcsize + 1 < dstsize)
+		ft_memcpy(dst, src, srcsize + 1);
+	else if (dstsize != 0)
+	{
+		ft_memcpy(dst, src, dstsize - 1);
+		dst[dstsize - 1] = '\0';
+	}
+	return (srcsize);
+}

@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/20 20:02:37 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/02/28 00:28:32 by mmazuelo         ###   ########.fr       */
+/*   Created: 2022/01/22 11:52:07 by mmazuelo          #+#    #+#             */
+/*   Updated: 2022/01/22 16:48:19 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-#include "libft/libft.h"
-#include <stdarg.h>
+void	*ft_memset(void *b, int c, size_t len)
+{
+	unsigned char	*ptr;
 
-int	ft_vprintf(char *buf, const char *fmt, va_list args);
-//
-//
-//
-//
-//
-//
-//
-//
-
-#endif
+	ptr = b;
+	while (len-- > 0)
+		*ptr++ = c;
+	return (b);
+}

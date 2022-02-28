@@ -1,28 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/28 00:51:05 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/02/28 00:51:45 by mmazuelo         ###   ########.fr       */
+/*   Created: 2022/02/09 12:22:43 by mmazuelo          #+#    #+#             */
+/*   Updated: 2022/02/14 21:08:23 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_printf(const char *fmt, ...)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	va_list	args;
-	int	done;
-	char	*str_print;
-	
-	if (fmt == NULL)
+	char	*str;
+	size_t	j;
+
+	if (!s)
 		return (0);
-	va_start(args, fmt);
-	done = ft_vprint(str_print, fmt, args);
-	va_end(args);
-	ft_putstr_fd(str_print, 1);
-	return (done);
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	if (ft_strlen(s) - start < len)
+		len = ft_strlen(s) - start;
+	str = (char *)malloc(sizeof(*s) * (len + 1));
+	if (!str)
+		return (NULL);
+	j = 0;
+	while (j < len)
+	{
+		str[j] = s[start];
+		start++;
+		j++;
+	}
+	str[j] = '\0';
+	return (str);
 }

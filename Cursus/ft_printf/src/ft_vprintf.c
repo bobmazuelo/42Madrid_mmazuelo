@@ -6,12 +6,10 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 00:26:02 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/02/28 01:33:27 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/05/02 20:24:19 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_vprintf(char *str, const char *fmt, va_list args)
-{
-}
+int	ft_vprintf(const char *fmt, va_list args)

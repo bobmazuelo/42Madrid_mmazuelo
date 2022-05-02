@@ -6,17 +6,17 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 01:52:39 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/05/02 17:57:20 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/05/02 18:27:39 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_printf.h"
 
 void	ft_flags(char *str, va_list fmt)
 {
 	str++;
 	if (*str == '%')
 		ft_putchar('%');
-	else if (*str == 'd')
-		ft_interger(fmt);
 	else if (*str == 's')
 		ft_string(fmt);
 	else if (*str == 'c')
@@ -35,4 +35,6 @@ void	ft_flags(char *str, va_list fmt)
 		ft_float(fmt);
 	else if (*str == 'o')
 		ft_octal(fmt);
+	else
+		return (NULL);
 }

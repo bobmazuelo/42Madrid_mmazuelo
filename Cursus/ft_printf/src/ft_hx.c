@@ -1,28 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_hx.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/28 00:51:05 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/05/02 18:21:48 by mmazuelo         ###   ########.fr       */
+/*   Created: 2022/05/02 18:22:39 by mmazuelo          #+#    #+#             */
+/*   Updated: 2022/05/02 18:27:57 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "src/ft_printf.h"
+#include "ft_printf.h"
 
-int	ft_printf(const char *fmt, ...)
-{
-	va_list	args;
-	int		done;
-	char	*str_print;
-
-	if (fmt == NULL)
-		return (0);
-	va_start(args, fmt);
-	done = ft_vprint(str_print, fmt, args);
-	va_end(args);
-	ft_putstr_fd(str_print, 1);
-	return (done);
-}

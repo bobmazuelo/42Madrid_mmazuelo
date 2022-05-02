@@ -6,11 +6,11 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 01:52:39 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/02/28 01:53:10 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/05/02 17:57:20 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_placeholder(char *str, va_list fmt)
+void	ft_flags(char *str, va_list fmt)
 {
 	str++;
 	if (*str == '%')

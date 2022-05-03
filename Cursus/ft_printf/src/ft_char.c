@@ -9,3 +9,16 @@
 /*   Updated: 2022/05/02 19:54:27 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_printf.h"
+
+int	ft_char(int chr)
+{
+	ft_putchr_fd(chr, 1);
+	return (1);
+}
+
+/*
+ * Mirar en printf si chr se lw puede meter o no el fd
+ */
+

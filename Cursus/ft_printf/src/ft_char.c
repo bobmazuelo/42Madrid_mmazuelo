@@ -17,8 +17,3 @@ int	ft_char(int chr)
 	ft_putchr_fd(chr, 1);
 	return (1);
 }
-
-/*
- * Mirar en printf si chr se lw puede meter o no el fd
- */
-

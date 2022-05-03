@@ -13,3 +13,37 @@
 #include "ft_printf.h"
 
 int	ft_vprintf(const char *fmt, va_list args)
+{
+	/*
+	 *
+	 */
+}
+
+void	ft_flags(char *str, va_list args)
+{
+	int	len;
+
+	len = 0;
+	str++;
+	if (*str == '%')
+		len += ft_putchar('%');
+	else if (*str == 's')
+		ft_str(va_arg(args));
+	else if (*str == 'c')
+		ft_char(va_arg(args));
+	else if (*str == 'p')
+		ft_ptr(va_arg(args));
+	else if (*str == 'x' || 'X')
+		ft_hex(va_arg(args), *str);
+	else if (*str == 'i' || *str == 'd')
+		ft_int(va_arg(args));
+	else if (*str == 'u')
+		ft_unsigned(va_arg(args));
+	else if (*str == 'e')
+		ft_scf(va_arg(args));
+	else if (*str == 'f')
+		ft_float(va_arg(args));
+	else if (*str == 'o')
+		ft_oct(va_arg(args));
+	return (len);
+}

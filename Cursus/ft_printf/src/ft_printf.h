@@ -17,13 +17,13 @@
 #include <stdarg.h>
 
 int	ft_vprintf(char *buf, const char *fmt, va_list args);
+int	ft_oct(unsigned int nb);
 //
 //
 //
 //
 //
 //
-//
-//
+void	ft_print_num(long long num, int base_l, char *base);
 
 #endif

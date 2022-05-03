@@ -12,38 +12,45 @@
 
 #include "ft_printf.h"
 
+void	ft_flags(char *str, va_list args);
+
 int	ft_vprintf(const char *fmt, va_list args)
 {
-	/*
-	 *
-	 */
+	int	done;
+
+	done = 0;
+	if (!fmt)
+		return (0);
+	while (*fmt != '\0')
+	{
+	}
+	va_end(args);
+	return (done);
 }
 
 void	ft_flags(char *str, va_list args)
 {
-	int	len;
+	int	done;
 
-	len = 0;
+	done = 0;
 	str++;
 	if (*str == '%')
-		len += ft_putchar('%');
+		done += ft_putchar('%');
 	else if (*str == 's')
-		ft_str(va_arg(args));
+		done += ft_str(va_arg(args, char *));
 	else if (*str == 'c')
-		ft_char(va_arg(args));
+		done += ft_char(va_arg(args, char));
 	else if (*str == 'p')
-		ft_ptr(va_arg(args));
+		done += ft_ptr(va_arg(args, unsigned long int));
 	else if (*str == 'x' || 'X')
-		ft_hex(va_arg(args), *str);
+		done += ft_hex(va_arg(args, unsigned int), *str);
 	else if (*str == 'i' || *str == 'd')
-		ft_int(va_arg(args));
+		done += ft_int(va_arg(args, int));
 	else if (*str == 'u')
-		ft_unsigned(va_arg(args));
-	else if (*str == 'e')
-		ft_scf(va_arg(args));
+		done += ft_unsigned(va_arg(args, unsigned int));
 	else if (*str == 'f')
-		ft_float(va_arg(args));
+		done += ft_float(va_arg(args, float));
 	else if (*str == 'o')
-		ft_oct(va_arg(args));
-	return (len);
+		done += ft_oct(va_arg(args, unsigned int));
+	return (done);
 }

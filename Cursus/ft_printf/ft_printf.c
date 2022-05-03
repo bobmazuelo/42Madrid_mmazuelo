@@ -20,8 +20,7 @@ int	ft_printf(const char *fmt, ...)
 	if (fmt == NULL)
 		return (0);
 	va_start(args, fmt);
-	done = ft_flags(fmt, args);
+	done = ft_vprintf(fmt, args);
 	va_end(args);
 	return (done);
 }
-// ft_vprint

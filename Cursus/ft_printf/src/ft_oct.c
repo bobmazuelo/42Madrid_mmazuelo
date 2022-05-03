@@ -9,3 +9,11 @@
 /*   Updated: 2022/05/02 19:54:54 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_printf.h"
+
+int	ft_oct(unsigned int nb)
+{
+	ft_putnbrbase(nb, 8, "01234567");
+	return (0);
+}

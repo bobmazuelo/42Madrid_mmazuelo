@@ -12,8 +12,8 @@
 
 #include "ft_printf.h"
 
-int	ft_char(int chr)
+int	ft_char(int c)
 {
-	ft_putchr_fd(chr, 1);
+	ft_putchr_fd(c, 1);
 	return (1);
 }

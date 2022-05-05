@@ -12,9 +12,9 @@
 
 #include "ft_printf.h"
 
-int	ft_hex(unsigned int nb, char *str)
+int	ft_hex(unsigned int nb, char str)
 {
-	if (*str == 'x')
+	if (str == 'x')
 	{
 		ft_putnbrbase(nb. 16, "0123456789abcdef");
 		return (0);

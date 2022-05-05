@@ -16,14 +16,16 @@
 #include "libft/libft.h"
 #include <stdarg.h>
 
-int	ft_vprintf(char *buf, const char *fmt, va_list args);
+int	ft_vprintf(const char *fmt, va_list args);
+int	ft_char(int c);
+int	ft_float();
+int	ft_hex(unsigned int nb, char str);
+int	ft_int();
 int	ft_oct(unsigned int nb);
-//
-//
-//
-//
-//
-//
+int	ft_ptr();
+int	ft_str();
+int	ft_unsigned();
+
 void	ft_print_num(long long num, int base_l, char *base);
 
 #endif

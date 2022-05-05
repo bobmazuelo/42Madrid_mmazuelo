@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-void	ft_flags(char *str, va_list args);
+int	ft_flags(const char *str, va_list args);
 
 int	ft_vprintf(const char *fmt, va_list args)
 {
@@ -21,26 +21,28 @@ int	ft_vprintf(const char *fmt, va_list args)
 	done = 0;
 	if (!fmt)
 		return (0);
-	va_start(args);
 	while (*fmt != '\0')
 	{
+		if (*fmt == '%')
+			ft_flags(fmt, args);
+		else
+			fmt++;
 	}
-	va_end(args);
 	return (done);
 }
 
-void	ft_flags(char *str, va_list args)
+int	ft_flags(const char *str, va_list args)
 {
 	int	done;
 
 	done = 0;
 	str++;
 	if (*str == '%')
-		done += ft_putchar('%');
+		done += ft_char('%');
 	else if (*str == 's')
 		done += ft_str(va_arg(args, char *));
 	else if (*str == 'c')
-		done += ft_char(va_arg(args, char));
+		done += ft_char(va_arg(args, int));
 	else if (*str == 'p')
 		done += ft_ptr(va_arg(args, unsigned long int));
 	else if (*str == 'x' || 'X')

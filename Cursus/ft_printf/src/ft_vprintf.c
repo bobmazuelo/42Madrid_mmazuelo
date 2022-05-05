@@ -51,8 +51,8 @@ int	ft_flags(const char *str, va_list args)
 		done += ft_int(va_arg(args, int));
 	else if (*str == 'u')
 		done += ft_unsigned(va_arg(args, unsigned int));
-	else if (*str == 'f')
-		done += ft_float(va_arg(args, float));
+	else if (*str == 'd')
+		done += ft_float(va_arg(args, double));
 	else if (*str == 'o')
 		done += ft_oct(va_arg(args, unsigned int));
 	return (done);

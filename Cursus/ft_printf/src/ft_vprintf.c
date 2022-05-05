@@ -21,6 +21,7 @@ int	ft_vprintf(const char *fmt, va_list args)
 	done = 0;
 	if (!fmt)
 		return (0);
+	va_start(args);
 	while (*fmt != '\0')
 	{
 	}

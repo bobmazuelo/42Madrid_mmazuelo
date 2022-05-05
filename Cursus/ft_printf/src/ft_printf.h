@@ -16,6 +16,7 @@
 #include "libft/libft.h"
 #include <stdarg.h>
 
+int	ft_printf(const char *fmt, ...);
 int	ft_vprintf(const char *fmt, va_list args);
 int	ft_char(int c);
 int	ft_hex(unsigned int nb, char str);

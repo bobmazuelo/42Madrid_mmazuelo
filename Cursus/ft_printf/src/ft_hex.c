@@ -16,12 +16,12 @@ int	ft_hex(unsigned int nb, char str)
 {
 	if (str == 'x')
 	{
-		ft_putnbrbase(nb. 16, "0123456789abcdef");
+		ft_print_num(nb, 16, "0123456789abcdef");
 		return (0);
 	}
 	else
 	{
-		ft_putnbrbase(nb, 16, "0123456789ABCDEF");
+		ft_print_num(nb, 16, "0123456789ABCDEF");
 		return (0);
 	}
 }

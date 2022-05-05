@@ -12,11 +12,14 @@
 
 NAME = libftprintf.a
 
-LIBFT = ./src/libft/libft.a
+LIBFT = src/libft/libft.a
+OBJ_DIR = obj/
+SRC_DIR = src/
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -Wpedantic
+CFLAGS = -Wall -Wextra -Werror -Wpedantic -I
 AR = ar rcs
 RM = rm -f
+
 
 # Colours
 redColour="\e[0;31m\033[1m"
@@ -28,38 +31,35 @@ purpleColour="\e[0;35m\033[1m"
 grayColour="\e[0;37m\033[1m"
 endColour="\033[0m\e[0m"
 
-FILES =   ft_printf.c \
-	  src/ft_char.c \
-	  src/ft_hex.c \
-	  src/ft_oct.c \
-	  src/ft_ptr.c \
-	  src/ft_str.c \
-	  src/ft_vprintf \
-	  src/ft_float.c \
-	  src/ft_int.c \
-	  src/ft_putnbrbase.c \
-	  src/ft_unsigned.c
+FILES =   ft_printf \
+	  ft_char \
+	  ft_hex \
+	  ft_oct \
+	  ft_ptr \
+	  ft_str \
+	  ft_vprintf \
+	  ft_float \
+	  ft_int \
+	  ft_putnbrbase \
+	  ft_unsigned
 
-OBJS = ${FILES: .c = .o}
+SRC = $(addprefix $(SRC_DIR), $(addsuffix .c, $(FILES)))
+OBJS = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(FILES)))
 
-.c.o:
-	${CC} ${CFLAGS} -c ${FILES}
+OBJF = .cache_exists
 
 all:	${NAME}
 $(NAME):	${OBJS}
 	${MAKE} all -C src/libft/
-	cp libft/libft.a $(NAME)
+	cp src/libft/libft.a $(NAME)
 
 	ar rc ${NAME} ${OBJS}
 	ranlib ${NAME}
 
-clean:
-	${RM} ${OBJS}
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c | $(OBJF)
+	@$(CC) $(FLAGS) -c $< -o $@
 
-fclean:
-	${RM} ${NAME}
+$(OBJF):
+	@mkdir -p $(OBJ_DIR)
 
-re:
-	fclean all
-
-.PHONY: all re 
+.PHONY: all 

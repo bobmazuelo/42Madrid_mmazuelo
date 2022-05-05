@@ -18,11 +18,10 @@
 
 int	ft_vprintf(const char *fmt, va_list args);
 int	ft_char(int c);
-int	ft_float(double nb);
 int	ft_hex(unsigned int nb, char str);
 int	ft_int(int nb);
 int	ft_oct(unsigned int nb);
-int	ft_ptr(void *ptr);
+int	ft_ptr(unsigned long long ptr);
 int	ft_str(char *str);
 int	ft_unsigned(unsigned int nb);
 

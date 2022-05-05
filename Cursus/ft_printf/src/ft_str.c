@@ -9,3 +9,12 @@
 /*   Updated: 2022/05/02 19:56:05 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+int	ft_str(char *str)
+{
+	if (str == NULL)
+		ft_putstr_fd("(null)", 1);
+	else
+		ft_putstr_fd(str, 1);
+	return (0);
+}

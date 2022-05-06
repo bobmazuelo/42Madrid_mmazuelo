@@ -30,21 +30,24 @@ CC = gcc
 
 FLAGS = -Wall -Wextra -Werror -Wpedantic -c
 
-#INCLUDES = -I src/ft_printf.h $(INCLUDES)
-
 OBJS = $(SRCS:.c=.o)
 
-$(NAME): $(OBJS)
-	$(MAKE) bonus -C src/libft
-	cp src/libft/libft.a $(NAME)
-	$(CC) $(FLAGS) $(SRCS)
-	ar -rcs $(NAME) $(OBJS)
+.c.o:
+	$(CC) $(FLAGS) -g -c $< -o $(<:.c=.o) -I./src/
 
 all :	$(NAME)
+
+$(NAME): $(OBJS)
+	$(MAKE) all -C src/libft
+	cp src/libft/libft.a $(NAME)
+	ar -rc $(NAME) $(OBJS)
+	ranlib ${NAME}
+	@echo "ft_printf: done"
 
 clean : 
 	$(MAKE) clean -C src/libft 
 	rm -rf $(OBJS)
+	rm -rf ./*.o
 
 fclean : clean
 	$(MAKE) fclean -C src/libft
@@ -52,13 +55,4 @@ fclean : clean
 
 re : fclean all
 
-# ft_char
-# ft_float
-# ft_hex
-# ft_int
-# ft_oct
-# ft_ptr
-# ft_putnbrbase
-# ft_str
-# ft_unsigned
-# ft_vprintf
+.PHONY: all 

@@ -61,9 +61,9 @@ $(NAME):	${OBJS}
 	${MAKE} all -C src/libft/
 	cp src/libft/libft.a $(NAME)
 	
-	$(CC) $(FLAGS) -I src/ft_printf.h $(SRC)
+	$(CC) $(FLAGS) $(SRC)
 	ar -rcs ${NAME} ${OBJS}
-	#ranlib ${NAME}
+	ranlib ${NAME}
 
 all:	${NAME}
 	

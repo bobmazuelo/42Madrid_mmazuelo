@@ -12,7 +12,4 @@
 
 #include "ft_printf.h"
 
-int	ft_int(int nb)
-{
-	return (0);
-}
+int	ft_int(int nb);

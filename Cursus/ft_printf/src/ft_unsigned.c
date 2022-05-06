@@ -12,7 +12,4 @@
 
 #include "ft_printf.h"
 
-int	ft_unsigned(unsigned int nb)
-{
-	return (0);
-}
+int	ft_unsigned(unsigned int nb);

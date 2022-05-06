@@ -45,7 +45,7 @@ int	ft_flags(const char *str, va_list args)
 		done += ft_char(va_arg(args, int));
 	else if (*str == 'p')
 		done += ft_ptr(va_arg(args, unsigned long long));
-	else if (*str == 'x' || 'X')
+	else if (*str == 'x' || *str == 'X')
 		done += ft_hex(va_arg(args, unsigned int), *str);
 	else if (*str == 'i' || *str == 'd')
 		done += ft_int(va_arg(args, int));

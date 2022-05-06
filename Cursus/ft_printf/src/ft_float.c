@@ -12,7 +12,4 @@
 
 #include "ft_printf.h"
 
-int	ft_float(double nb)
-{
-	return (0);
-}
+int	ft_float(double nb);

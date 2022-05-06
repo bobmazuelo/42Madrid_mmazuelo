@@ -12,7 +12,4 @@
 
 #include "ft_printf.h"
 
-int	ft_ptr(unsigned long long ptr)
-{
-	return (0);
-}
+int	ft_ptr(unsigned long long ptr);

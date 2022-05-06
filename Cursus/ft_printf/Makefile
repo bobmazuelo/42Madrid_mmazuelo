@@ -28,16 +28,16 @@ SRCS =  ft_printf.c \
 		
 CC = gcc
 
-FLAGS = -c -Wall -Wextra -Werror -Wpedantic
+FLAGS = -Wall -Wextra -Werror -Wpedantic -c
 
-INCLUDES = -I src/ft_printf.h
+#INCLUDES = -I src/ft_printf.h $(INCLUDES)
 
 OBJS = $(SRCS:.c=.o)
 
 $(NAME): $(OBJS)
 	$(MAKE) bonus -C src/libft
 	cp src/libft/libft.a $(NAME)
-	$(CC) $(FLAGS) $(INCLUDES) $(SRCS)
+	$(CC) $(FLAGS) $(SRCS)
 	ar -rcs $(NAME) $(OBJS)
 
 all :	$(NAME)

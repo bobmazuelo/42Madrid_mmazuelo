@@ -12,11 +12,9 @@
 
 LIBFT = src/libft/libft.a
 
-N_TEMP = temp.a
-
 NAME = libftprintf.a
 
-SRCS =  ft_printf.c \
+SRCS =  src/ft_printf.c \
 	src/ft_char.c \
 	src/ft_float.c \
 	src/ft_hex.c \
@@ -30,7 +28,7 @@ SRCS =  ft_printf.c \
 		
 CC = gcc
 
-FLAGS = -c -Wall -Wextra -Werror
+FLAGS = -c -Wall -Wextra -Werror -Wpedantic
 
 INCLUDES = -I src/ft_printf.h
 
@@ -53,3 +51,14 @@ fclean : clean
 	rm -rf $(NAME)
 
 re : fclean all
+
+# ft_char
+# ft_float
+# ft_hex
+# ft_int
+# ft_oct
+# ft_ptr
+# ft_putnbrbase
+# ft_str
+# ft_unsigned
+# ft_vprintf

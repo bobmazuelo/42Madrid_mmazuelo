@@ -14,7 +14,7 @@ LIBFT = src/libft/libft.a
 
 NAME = libftprintf.a
 
-SRCS =  src/ft_printf.c \
+SRCS =  ft_printf.c \
 	src/ft_char.c \
 	src/ft_float.c \
 	src/ft_hex.c \

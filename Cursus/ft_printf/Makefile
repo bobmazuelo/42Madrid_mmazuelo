@@ -31,18 +31,20 @@ purpleColour="\e[0;35m\033[1m"
 grayColour="\e[0;37m\033[1m"
 endColour="\033[0m\e[0m"
 
-FILES =   ft_printf \
-	  ft_char \
-	  ft_hex \
-	  ft_oct \
-	  ft_ptr \
-	  ft_str \
-	  ft_vprintf \
-	  ft_float \
-	  ft_int \
-	  ft_putnbrbase \
-	  ft_unsigned
+FILES_INIT =   ft_printf 
 
+FILES_SRC = ft_char \
+	ft_hex \
+	ft_oct \
+	ft_ptr \
+	ft_str \
+	ft_vprintf \
+	ft_float \
+	ft_int \
+	ft_putnbrbase \
+	ft_unsigned
+
+SRC_INIT = $(addsuffix .c, $(FILES_INIT))
 SRC = $(addprefix $(SRC_DIR), $(addsuffix .c, $(FILES)))
 OBJS = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(FILES)))
 
@@ -56,7 +58,7 @@ $(NAME):	${OBJS}
 	ar rc ${NAME} ${OBJS}
 	ranlib ${NAME}
 
-$(OBJ_DIR)%.o: $(SRC_DIR)%.c | $(OBJF)
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c $(SRC_INIT)%.c | $(OBJF)
 	@$(CC) $(FLAGS) -c $< -o $@
 
 $(OBJF):

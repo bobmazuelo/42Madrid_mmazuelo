@@ -6,10 +6,14 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 19:37:47 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/05/02 19:54:47 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/05/07 12:03:46 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_int(int nb);
+int	ft_int(int nb)
+{
+	ft_putnbr_fd(nb, 1);
+	return (0);
+}

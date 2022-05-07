@@ -6,20 +6,15 @@
 #    By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/20 20:51:53 by mmazuelo          #+#    #+#              #
-#    Updated: 2022/02/21 00:07:44 by mmazuelo         ###   ########.fr        #
+#    Updated: 2022/05/07 12:11:35 by mmazuelo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
 LIBFT = src/libft/libft.a
-OBJ_DIR = obj/
-SRC_DIR = src/
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -Wpedantic
-AR = ar rcs
-RM = rm -f
-
+CFLAGS = -Wall -Wextra -Werror -Wpedantic -c
 
 # Colours
 redColour="\e[0;31m\033[1m"
@@ -38,33 +33,42 @@ SRC = ft_printf.c \
 	src/ft_ptr.c \
 	src/ft_str.c \
 	src/ft_vprintf.c \
-	src/ft_float.c \
 	src/ft_int.c \
 	src/ft_putnbrbase.c \
 	src/ft_unsigned.c 
 
-OBJS = ft_printf.o \
+OBJS_d = ft_printf.o \
          src/ft_char.o \
          src/ft_hex.o \
          src/ft_oct.o \
          src/ft_ptr.o \
          src/ft_str.o \
          src/ft_vprintf.o \
-         src/ft_float.o \
          src/ft_int.o \
          src/ft_putnbrbase.o \
          src/ft_unsigned.o
 
-OBJS = $(SRC:.c=.o)
+OBJS = $(patsubst %.c, %.o, $(SRC))
 
-$(NAME):	${OBJS}
+$(NAME):
 	${MAKE} all -C src/libft/
 	cp src/libft/libft.a $(NAME)
 	
-	$(CC) $(FLAGS) $(SRC)
+	$(CC) $(FLAGS) $(SRC) -I./src/
 	ar -rcs ${NAME} ${OBJS}
 	ranlib ${NAME}
+	@echo "$(redColour)Compile ft_print$(endColour)"
 
 all:	${NAME}
-	
+
+clean:
+	rm -rf $(OBJS)
+	rm -rf src/libft/*.o
+
+fclean: clean
+	rm -rf $(NAME)
+	rm -rf $(LIBFT)
+
+re: fclean all
+
 .PHONY: all 

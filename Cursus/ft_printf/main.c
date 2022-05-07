@@ -1,9 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/07 11:37:34 by mmazuelo          #+#    #+#             */
+/*   Updated: 2022/05/07 11:45:10 by mmazuelo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "src/ft_printf.h"
 #include <stdlib.h>
 
 int	main(void)
 {
-	char d[11] = "Hola Mundo!";
-	ft_printf("Hello World: %s", d);
+	ft_printf("Hello World: %s", "Hola Mundo");
 	return (0);
 }

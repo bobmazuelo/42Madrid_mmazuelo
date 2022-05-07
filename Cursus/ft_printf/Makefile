@@ -6,7 +6,7 @@
 #    By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/20 20:51:53 by mmazuelo          #+#    #+#              #
-#    Updated: 2022/05/07 12:11:35 by mmazuelo         ###   ########.fr        #
+#    Updated: 2022/05/07 12:31:49 by mmazuelo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,16 +15,6 @@ NAME = libftprintf.a
 LIBFT = src/libft/libft.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -Wpedantic -c
-
-# Colours
-redColour="\e[0;31m\033[1m"
-greenColour="\e[0;32m\033[1m"
-blueColour="\e[0;34m\033[1m"
-yellowColour="\e[0;33m\033[1m"
-turquoiseColour="\e[0;36m\033[1m"
-purpleColour="\e[0;35m\033[1m"
-grayColour="\e[0;37m\033[1m"
-endColour="\033[0m\e[0m"
 
 SRC = ft_printf.c \
 	src/ft_char.c \
@@ -50,21 +40,19 @@ OBJS_d = ft_printf.o \
 
 OBJS = $(patsubst %.c, %.o, $(SRC))
 
-$(NAME):
+$(NAME): $(OBJS)
 	${MAKE} all -C src/libft/
 	cp src/libft/libft.a $(NAME)
 	
-	$(CC) $(FLAGS) $(SRC) -I./src/
+	$(CC) $(CFLAGS) $(SRC) -I./src/
 	ar -rcs ${NAME} ${OBJS}
 	ranlib ${NAME}
-	@echo "$(redColour)Compile ft_print$(endColour)"
+	echo "Compile ft_print"
 
 all:	${NAME}
 
 clean:
-	rm -rf $(OBJS)
-	rm -rf src/libft/*.o
-
+	find . -type file -name "*.o"  -delete -print
 fclean: clean
 	rm -rf $(NAME)
 	rm -rf $(LIBFT)

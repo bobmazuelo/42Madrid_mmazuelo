@@ -6,15 +6,15 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 11:37:34 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/05/07 11:45:10 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/05/07 13:50:14 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "src/ft_printf.h"
-#include <stdlib.h>
+#include <stdio.h>
 
 int	main(void)
 {
-	ft_printf("Hello World: %s", "Hola Mundo");
+	ft_printf("", c);
 	return (0);
 }

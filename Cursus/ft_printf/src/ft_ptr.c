@@ -6,7 +6,7 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 19:38:03 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/05/07 12:22:15 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/05/07 13:44:33 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 int	ft_ptr(unsigned long long ptr)
 {
-	if (ptr == 0)
-		return (1);
-	ft_putchar_fd('p', 1);
-	return (0);
+	ft_putstr_fd("0x", 1);
+	ft_hex(ptr, 'x');
+	return (1);
 }

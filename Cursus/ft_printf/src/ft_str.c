@@ -6,7 +6,7 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 19:38:43 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/05/07 13:07:55 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/05/08 19:36:21 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,12 @@
 int	ft_str(char *str)
 {
 	if (str == NULL)
-		ft_putstr_fd("(null)", 1);
+	{
+		str = "(null)";
+		ft_putstr_fd(str, 1);
+		return (ft_strlen(str));
+	}
 	else
 		ft_putstr_fd(str, 1);
-	return (1);
+	return (ft_strlen(str));
 }

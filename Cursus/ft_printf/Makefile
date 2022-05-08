@@ -6,7 +6,7 @@
 #    By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/20 20:51:53 by mmazuelo          #+#    #+#              #
-#    Updated: 2022/05/07 12:31:49 by mmazuelo         ###   ########.fr        #
+#    Updated: 2022/05/08 16:39:03 by mmazuelo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,16 +47,18 @@ $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(SRC) -I./src/
 	ar -rcs ${NAME} ${OBJS}
 	ranlib ${NAME}
-	echo "Compile ft_print"
+	@echo "\e[5m\e[31mCompile ft_print\e[25m\e[0m"
 
 all:	${NAME}
 
 clean:
-	find . -type file -name "*.o"  -delete -print
+	rm -rf *.o
+	rm -rf src/*.o
+	rm -rf src/libft/*.o
 fclean: clean
 	rm -rf $(NAME)
 	rm -rf $(LIBFT)
 
 re: fclean all
 
-.PHONY: all 
+.PHONY: fclean all re

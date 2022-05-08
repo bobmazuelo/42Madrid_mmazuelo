@@ -6,7 +6,7 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 19:37:55 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/05/07 13:06:54 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/05/08 22:23:30 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int	ft_oct(unsigned int nb)
 {
-	ft_print_num(nb, 8, "01234567");
-	return (1);
+	int	done;
+
+	done = 0;
+	return (ft_print_num(nb, 8, "01234567", &done));
 }

@@ -6,7 +6,7 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 19:37:28 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/05/07 13:06:29 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/05/08 21:07:11 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,11 @@
 
 int	ft_hex(unsigned int nb, char str)
 {
+	int	done;
+
+	done = 0;
 	if (str == 'x')
-	{
-		ft_print_num(nb, 16, "0123456789abcdef");
-		return (1);
-	}
+		return (ft_print_num(nb, 16, "0123456789abcdef", &done));
 	else
-	{
-		ft_print_num(nb, 16, "0123456789ABCDEF");
-		return (1);
-	}
+		return (ft_print_num(nb, 16, "0123456789ABCDEF", &done));
 }

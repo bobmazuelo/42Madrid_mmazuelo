@@ -6,7 +6,7 @@
 #    By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/20 20:51:53 by mmazuelo          #+#    #+#              #
-#    Updated: 2022/05/07 12:31:49 by mmazuelo         ###   ########.fr        #
+#    Updated: 2022/05/08 15:35:15 by mmazuelo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,9 @@ $(NAME): $(OBJS)
 all:	${NAME}
 
 clean:
-	find . -type file -name "*.o"  -delete -print
+	rm -rf *.o
+	rm -rf src/*.o
+	rm -rf src/libft/*.o
 fclean: clean
 	rm -rf $(NAME)
 	rm -rf $(LIBFT)

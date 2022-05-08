@@ -6,7 +6,7 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 19:38:50 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/05/07 17:12:08 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/05/08 22:24:26 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 
 int	ft_unsigned(unsigned int nb)
 {
-	return(ft_print_num(nb, 10, "0123456789", 1));
+	int	done;
+
+	done = 0;
+	return (ft_print_num(nb, 10, "0123456789", &done));
 }

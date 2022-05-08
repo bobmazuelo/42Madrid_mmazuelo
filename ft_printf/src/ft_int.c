@@ -6,7 +6,7 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 19:37:47 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/05/07 17:09:34 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/05/08 19:44:51 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,13 @@
 
 int	ft_int(int nb)
 {
-	return(ft_print_num(nb, 10, "0123456789", 1));
+	int	done;
+
+	done = 0;
+	if (nb < 0)
+	{
+		done = ft_char('-');
+		nb *= -1;
+	}
+	return (ft_print_num(nb, 10, "0123456789", done));
 }

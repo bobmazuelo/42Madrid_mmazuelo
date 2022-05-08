@@ -6,7 +6,7 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 00:26:02 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/05/07 17:08:47 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/05/08 18:46:23 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ int	ft_vprintf(const char *fmt, va_list args)
 	{
 		if (*fmt == '%')
 		{
-			done = ft_flags(fmt, args, done);	
-			fmt+=2;
+			done = ft_flags(fmt, args, done);
+			fmt += 2;
 		}
 		else
 		{
@@ -47,7 +47,7 @@ int	ft_flags(const char *str, va_list args, int done)
 	else if (*str == 'c')
 		done += ft_char(va_arg(args, int));
 	else if (*str == 'p')
-		done += ft_ptr(va_arg(args, unsigned long long int));
+		done += ft_ptr(va_arg(args, void *));
 	else if (*str == 'x' || *str == 'X')
 		done += ft_hex(va_arg(args, unsigned int), *str);
 	else if (*str == 'i' || *str == 'd')

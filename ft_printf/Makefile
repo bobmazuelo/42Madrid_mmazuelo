@@ -12,7 +12,6 @@
 
 NAME = libftprintf.a
 
-LIBFT = src/libft/libft.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -Wpedantic -c
 
@@ -41,9 +40,6 @@ OBJS_d = ft_printf.o \
 OBJS = $(patsubst %.c, %.o, $(SRC))
 
 $(NAME): $(OBJS)
-	${MAKE} all -C src/libft/
-	cp src/libft/libft.a $(NAME)
-	
 	$(CC) $(CFLAGS) $(SRC) -I./src/
 	ar -rcs ${NAME} ${OBJS}
 	ranlib ${NAME}
@@ -54,10 +50,8 @@ all:	${NAME}
 clean:
 	rm -rf *.o
 	rm -rf src/*.o
-	rm -rf src/libft/*.o
 fclean: clean
 	rm -rf $(NAME)
-	rm -rf $(LIBFT)
 
 re: fclean all
 

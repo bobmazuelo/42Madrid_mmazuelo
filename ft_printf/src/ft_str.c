@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_str.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/09 12:35:52 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/02/18 17:49:18 by mmazuelo         ###   ########.fr       */
+/*   Created: 2022/05/02 19:38:43 by mmazuelo          #+#    #+#             */
+/*   Updated: 2022/05/08 19:36:21 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+int	ft_str(char *str)
 {
-	char	*ptr;
-	char	*str;
-
-	if (!s1 || !s2)
-		return (NULL);
-	ptr = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
-	if (!ptr)
-		return (NULL);
-	str = ptr;
-	while (*s1 != '\0')
-		*ptr++ = *s1++;
-	while (*s2 != '\0')
-		*ptr++ = *s2++;
-	*ptr = '\0';
-	return (str);
+	int	done;
+	
+	done = 0;	
+	if (str == NULL)
+		str = "(null)";
+	while (*str != '\0')
+		done += ft_char(*str++);
+	return (done);
 }

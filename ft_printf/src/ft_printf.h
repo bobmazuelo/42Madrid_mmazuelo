@@ -13,9 +13,9 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include "libft/libft.h"
 # include <stdarg.h>
 # include <limits.h>
+# include <unistd.h>
 
 int		ft_printf(const char *fmt, ...);
 int		ft_vprintf(const char *fmt, va_list args);

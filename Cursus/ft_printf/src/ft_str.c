@@ -15,8 +15,8 @@
 int	ft_str(char *str)
 {
 	int	done;
-	
-	done = 0;	
+
+	done = 0;
 	if (str == NULL)
 		str = "(null)";
 	while (*str != '\0')

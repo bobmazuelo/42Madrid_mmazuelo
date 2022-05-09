@@ -20,21 +20,9 @@ int	ft_abs(int nb)
 		return (nb);
 }
 
-int	ft_manhattan_dist(int x1, int y1, int x2, int y2)
+int	ft_manhattan_dist(t_point a, t_point b)
 {
-	return (ft_abs(x1 - x2) + ft_abs(y1 - y2));
-}
-
-int	ft_sqrt(int nb)
-{
-	long	x;
-	
-	x = 0;
-	while((x * x) <= nb)
-		x++;
-	if (x * x == nb)
-		return (x);
-	return (0);
+	return (ft_abs(b.x - a.x) + ft_abs(b.y - b.a));
 }
 
 void	read_table()

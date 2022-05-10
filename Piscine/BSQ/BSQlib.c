@@ -10,28 +10,4 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "BSQlib.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-
-char	*read_line(char *file_dir)
-{
-	char	*line;
-	if (file_dir == NULL)
-		return (0);
-	else
-	{
-		line = read(file_dir, 2, 2);
-	}
-}
-
-
-int main(int argc, char **argv)
-{
-	char	*out;
-
-	out = read_line(argv[1]);
-	printf("%s", out);
-	return (0);
-}
+#include "BSQlib.h"

@@ -10,20 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "BSQlib.h"
+// #include "BSQlib.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 
-int	ft_abs(int nb)
+char	*read_line(char *file_dir)
 {
-	if (nb < 0)
-		return (-nb);
+	char	*line;
+	if (file_dir == NULL)
+		return (0);
 	else
-		return (nb);
+	{
+		line = read(file_dir, 2, 2);
+	}
 }
 
-int	ft_manhattan_dist(t_point a, t_point b)
+
+int main(int argc, char **argv)
 {
-	return (ft_abs(b.x - a.x) + ft_abs(b.y - b.a));
-}
+	char	*out;
 
-void	read_table()
-{};
+	out = read_line(argv[1]);
+	printf("%s", out);
+	return (0);
+}

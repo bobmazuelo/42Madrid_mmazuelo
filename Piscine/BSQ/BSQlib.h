@@ -12,14 +12,12 @@
 
 #ifndef BSQLIB_H
 # define BSQLIB_H
+#include <unistd.h>
+#include <stdlib.h>
 
 typedef struct s_point {
 	int	x;
 	int	y;
 }	t_point;
-
-
-int	ft_abs(int nb);
-int	ft_manhattan_dist(t_point a, t_point b);
 
 #endif

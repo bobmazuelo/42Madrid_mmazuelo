@@ -5,7 +5,7 @@ struct	map {
 	char	void_dot;
 	char	obs_o;
 	char	full_x;
-}
+};
 
 char	*bsq_map(int fd)
 {

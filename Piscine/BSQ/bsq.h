@@ -8,5 +8,6 @@
 int	ft_atoi(const char *str);
 void	ft_putchar(int c);
 void	ft_str(const char *str);
+char	*bsq_map(int fd)
 
 #endif

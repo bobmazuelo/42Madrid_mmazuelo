@@ -23,6 +23,6 @@ fclean: clean
 
 re: fclean all
 
-cl: all clean
+clear: all clean
 
 .PHONY: fclean all re cl

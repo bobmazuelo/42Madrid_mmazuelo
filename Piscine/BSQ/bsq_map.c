@@ -2,17 +2,15 @@
 
 struct	map {
 	int	rows;
-	char	void_dot;
-	char	obs_o;
-	char	full_x;
+	char	empty;
+	char	obs;
+	char	full;
 };
 
 char	*bsq_map(int fd)
 {
-	struct map line = {
-		1,
-		'.',
-		'o',
-		'x'
-	};
+	char *str;
+
+	str = calloc(100, sizeof(char *));
+	read(fd, str, 100);
 }

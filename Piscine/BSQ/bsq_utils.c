@@ -27,6 +27,21 @@ int	ft_atoi(const char *str)
 	return ((int)(num * sign));
 }
 
+char	*ft_x(char *str)
+{
+	int	i;
+
+	i = 0;
+	while(*str != '\0')
+	{
+		if (*str == '.' && i % 2 == 0)
+			*str = 'x';
+		str++;
+		i++;
+	}
+	return (str);
+}
+
 void	ft_putchar(int c)
 {
 	write(1, &c, 1);

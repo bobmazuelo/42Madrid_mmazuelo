@@ -32,7 +32,7 @@ int	ft_ptr(void *ptr)
 	done = 2;
 	pointer = (unsigned long) ptr;
 	if (pointer == 0)
-		return (ft_str("(nil)"));
+		return (ft_str("0x0"));
 	ft_str("0x");
 	return (ft_pointer(pointer, &done));
 }

@@ -6,14 +6,14 @@ int	main(int argc, char **argv)
 	int	fd;
 	char	*line;
 
-	if (argc != 2)
+	if (argc ^ 2)
 		exit(1);
 	else
 	{
 		fd = open(argv[1], O_RDONLY);
 		if (fd < 0)
 			exit(1);
-		bsq_map(fd);
+		ft_x(fd);
 		close(fd);
 		ft_putchar('\n');
 		return (0);

@@ -4,7 +4,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror -Wpedantic -c
 
 SRC = bsq_utils.c \
-      bsq_map.c
+      #bsq_map.c
 
 OBJ = $(patsubst %.c, %.o, $(SRC))
 

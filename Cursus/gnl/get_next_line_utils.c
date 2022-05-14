@@ -12,4 +12,12 @@
 
 #include "get_next_line.h"
 
+size_t	ft_strclen(const char *str, int c)
+{
+	const char	*ptr;
 
+	ptr = *str;
+	while (*ptr ^ c || *ptr ^ 0)
+		ptr++;
+	return (ptr - str);
+}

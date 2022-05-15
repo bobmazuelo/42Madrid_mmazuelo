@@ -6,11 +6,22 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 19:31:20 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/05/14 22:12:15 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/05/15 22:49:28 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+
+int	check_nl(char *str)
+{
+	while (*str)
+	{
+		if (*str == 10)
+			return (1);
+		str++;
+	}
+	return (0);
+}
 
 size_t	ft_strclen(const char *str, int c)
 {

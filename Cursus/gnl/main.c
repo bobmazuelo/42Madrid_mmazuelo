@@ -6,7 +6,7 @@
 /*   By: mmazuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/15 09:52:39 by mmazuelo          #+#    #+#             */
-/*   Updated: 2022/05/15 09:53:38 by mmazuelo         ###   ########.fr       */
+/*   Updated: 2022/05/15 10:58:39 by mmazuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ int	main(int argc, char **argv)
 	while (*str != '\0')
 	{
 		printf("|%s|\n", str);
-		free(str);
 		str = get_next_line(fd);
 	}
+	free(str);
 	return (0);
 }

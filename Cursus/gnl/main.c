@@ -18,6 +18,7 @@ int	main(int argc, char **argv)
 	int		fd;
 	char	*str;
 
+	str = NULL;
 	fd = open(argv[1], O_RDONLY);
 	str = get_next_line(fd);
 	while (*str != '\0')

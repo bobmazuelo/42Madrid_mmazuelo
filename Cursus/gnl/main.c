@@ -7,6 +7,8 @@ int	main(int argc, char **argv)
 	int	fd;
 	char	*str;
 
+	if (argc == 1)
+		exit(1);
 	str = NULL;
 	fd = open(argv[1], O_RDONLY);
 	str = get_next_line(fd);
@@ -16,5 +18,6 @@ int	main(int argc, char **argv)
 		str = get_next_line(fd);
 	}
 	free(str);
+	close(fd);
 	return (0);
 }

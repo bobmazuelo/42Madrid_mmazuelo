@@ -5,11 +5,11 @@
 #include <unistd.h>
 
 char	*get_next_line(int fd);
+/*
 size_t	ft_strlen(const char *str);
 char	*ft_strdup(char *str);
 char	*read_nl(char *line);
-// char	*ft_strcat(char *dest, char *src);
 
 void ft_char(char *dest, char *src);
-
+*/
 #endif

@@ -1,6 +1,5 @@
 #include "get_next_line.h"
-#include <string.h>
-
+/*
 size_t	ft_strlen(const char *str)
 {
 	const char	*ptr;
@@ -11,7 +10,7 @@ size_t	ft_strlen(const char *str)
 	return (ptr - str);
 }
 
-/*
+
 char	*ft_strcat(char *dest, char *src)
 {
 	int	i;
@@ -29,7 +28,6 @@ char	*ft_strcat(char *dest, char *src)
 	dest[i + j] = '\0';
 	return (dest);
 }
-*/
 
 void	ft_strcat(char *s1, char *s2)
 {
@@ -57,5 +55,5 @@ char	*read_nl(char *line)
 	}
 	return (stock);
 }
-
+*/
 

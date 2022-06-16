@@ -3,7 +3,7 @@
 char	*get_next_line(int fd)
 {
 	char		str;
-	char		*line = malloc(sizeof(char) * 1000);
+	char		*line = malloc(sizeof(char) * BUFFER_SIZE);
 	int		i;
 	int		n_read;
 

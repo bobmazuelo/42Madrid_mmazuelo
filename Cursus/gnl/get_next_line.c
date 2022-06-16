@@ -2,17 +2,17 @@
 
 char	*get_next_line(int fd)
 {
-	char		str;
-	char		*line = malloc(sizeof(char) * BUFFER_SIZE);
+	static char		str;
+	char		*line;
 	int		i;
 	int		n_read;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return NULL;
-	n_read = read(fd, &str, 1);
-	while (n_read > 0)
+	line = malloc(sizeof(char) * BUFFER_SIZE);
+	i = 0;
+	while ((n_read = read(fd, &str, 1)) > 0)
 	{
-		n_read = read(fd, &str, 1);
 		line[i++] = str;
 		if (str == '\n')
 			break;

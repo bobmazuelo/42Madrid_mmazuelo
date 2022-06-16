@@ -12,14 +12,11 @@ int	main(int argc, char **argv)
 	str = NULL;
 	fd = open(argv[1], O_RDONLY);
 	str = get_next_line(fd);
-	printf("%s", str);
-	/*
 	while (*str != '\0')
 	{
 		printf(">%s<", str);
 		str = get_next_line(fd);
 	}
-	*/
 	free(str);
 	close(fd);
 	return (0);

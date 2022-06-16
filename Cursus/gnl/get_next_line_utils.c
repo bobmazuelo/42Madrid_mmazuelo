@@ -22,33 +22,34 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-//char	*ft_strcat(char *dest, char *src)
+//void	ft_strcat(char *s1, char *s2)
 //{
-//	int	i;
-//	int	j;
-//
-//	i = 0;
-//	while (dest[i] != '\0')
-//		i++;
-//	j = 0;
-//	while (src[j] != '\0')
+//	while (*s1)
+//		s1++;
+//	while (*s2)
 //	{
-//		dest[i + j] = src[j];
-//		j++;
+//		*s1 = *s2;
+//		s2++;
+//		s1++;
 //	}
-//	dest[i + j] = '\0';
-//	return (dest);
+//	*s1++ = '\0';
 //}
 
-void	ft_strcat(char *s1, char *s2)
+char	*ft_strjoin(char *s1, char *s2)
 {
-	while (*s1)
-		s1++;
-	while (*s2)
-	{
-		*s1 = *s2;
-		s2++;
-		s1++;
-	}
-	*s1++ = '\0';
+	char	*ptr;
+	char	*str;
+
+	if (!s1 || !s2)
+		return (NULL);
+	ptr = (char *)malloc((ft_strlen(s1) + 1) * sizeof(char));
+	if (!ptr)
+		return (NULL);
+	str = ptr;
+	while (*s1 != '\0')
+		*ptr++ = *s1++;
+	while (*s2 != '\0')
+		*ptr++ = *s2++;
+	*ptr = '\0';
+	return (str);
 }

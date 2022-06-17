@@ -35,21 +35,33 @@ char	*ft_strchr(const char *s, int c)
 //	*s1++ = '\0';
 //}
 
+void	ft_bzero(void *b, size_t n)
+{
+	unsigned char	*ptr;
+
+	ptr = b;
+	while (n > 0)
+	{
+		*ptr++ = 0;
+		n--;
+	}
+}
+
 char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*ptr;
 	char	*str;
 
-	if (!s1 || !s2)
+	if (!s1)
 		return (NULL);
-	ptr = (char *)malloc((ft_strlen(s1) + 1) * sizeof(char));
+	ptr = (char *)malloc((ft_strlen(s1) + ft_strlen(s2)) * sizeof(char));
 	if (!ptr)
 		return (NULL);
 	str = ptr;
 	while (*s1 != '\0')
 		*ptr++ = *s1++;
 	while (*s2 != '\0')
-		*ptr++ = *s2++;
+		*ptr = *s2++;
 	*ptr = '\0';
 	return (str);
 }

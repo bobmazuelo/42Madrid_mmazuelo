@@ -1,5 +1,19 @@
-Esto es una prueba de get_next_line
-estoy probando si me printean las lineas por separado
-y funciona bien sin ningun leak.
+ Our Deepnote + Snowpark for Python integration is here! You can now use Deepnote to perform database transformations with Python and deploy machine learning models to Snowflake—all without moving your data or changing the Python code you already use.
+Deepnote + Snowpark demo
 
-Vamos a ver.
+That’s right, no more kludgy data science workflows involving a mishmash of different tools, languages, and environments. With Snowpark + Deepnote, your warehouse feels like an in-memory object. Simply write your code in Deepnote and manipulate your tables as if you were using Pandas. All compute occurs directly in the warehouse, so there’s no need to constantly move your data around. Leave it where it belongs and write the Python code you love.
+
+To show how it works, we built an end-to-end data science project in Deepnote—from transformation, data exploration, model training, and evaluation to model deployment.
+Head over to our blog to check it out →
+
+ 
+
+Other ❄️ Snowflake + Deepnote resources:
+
+- Snowpark template notebook
+
+- Snowpark + Deepnote docs
+
+- Snowpark video walk-through
+
+- Snowflake integration overview

@@ -3,26 +3,33 @@
 char	*get_next_line(int fd)
 {
 	char			str;
-	static char		*line;
-	int			i;
+	char			*c;
+	char			*line;
 	int			n_read;
+	int			i;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return NULL;
-	line = malloc(sizeof(char) * BUFFER_SIZE);
 	i = 0;
+	line = malloc(sizeof(char) * BUFFER_SIZE);
+	c = malloc(sizeof(char) * 2);
+	ft_bzero(c, 2);
+	ft_memcpy(line, c, 2);
 	while ((n_read = read(fd, &str, 1)) > 0)
 	{
-		ft_strjoin(line, &str);
+		*c = str;
+		line = ft_strjoin(line, c);
 		i++;
 		if (str == '\n')
 			break;
 	}
-	if ((!line[i - 1] && !n_read) || n_read == -1)	
+	line[i] = '\0';
+	/*
+	if((line[i - 1] && !n_read) || n_read <= 0)
 	{
 		free(line);
 		return (NULL);
 	}
-	line[i] = '\0';
+	*/
 	return (line);
 }
